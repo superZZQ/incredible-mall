@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-10-18 10:37:15
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-15 19:22:55
+* @Last Modified time: 2018-12-18 17:02:02
 */
 const path = require('path');
 const webpack = require('webpack');
@@ -44,6 +44,14 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('index')),
     new HtmlWebpackPlugin(getHtmlConfig('login')),
   ],
+  resolve:{
+    alias : {
+        util : __dirname + '/src/util',
+        page : __dirname + '/src/page',
+        service : __dirname + '/src/service',
+        image : __dirname + '/src/image'
+    }
+  },
   module: {
     //css独立通用模块
     rules: [
