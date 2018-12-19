@@ -1,0 +1,22 @@
+/*
+* @Author: ZZQ
+* @Date:   2018-12-19 14:34:59
+* @Last Modified by:   ZZQ
+* @Last Modified time: 2018-12-19 14:42:53
+*/
+.footer{
+    padding-bottom: 10px;
+}
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .links .link{
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}

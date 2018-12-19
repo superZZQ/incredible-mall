@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-10-18 10:37:15
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-18 17:02:02
+* @Last Modified time: 2018-12-19 17:08:59
 */
 const path = require('path');
 const webpack = require('webpack');
@@ -46,10 +46,12 @@ var config = {
   ],
   resolve:{
     alias : {
+        node_modules : __dirname + '/node_modules',
         util : __dirname + '/src/util',
         page : __dirname + '/src/page',
         service : __dirname + '/src/service',
-        image : __dirname + '/src/image'
+        image : __dirname + '/src/image',
+        fonts : __dirname + '/src/fonts'
     }
   },
   module: {
@@ -61,6 +63,12 @@ var config = {
           fallback: "style-loader",
           use: "css-loader"
         })
+    },
+    {
+        test:/\.string$/, 
+        use: [{
+            loader:'html-loader'
+        }]
     },
     {
         test:/\.(jpg|png|gif|svg)$/,    

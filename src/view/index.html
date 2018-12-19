@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-<%= require('html-loader!./layout/html-head.html') %>
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title>沙雕商城电商平台</title>
+</head>
+
 <body>
-    <body>
-      <div id="app">
-        <div class="box">
-          <p class="iconfont">Hello World! I love you!</p>
-          <div id="img"></div>
-        </div>
-  </div>
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <%= require('html-loader!./layout/header.html') %>
+    <%= require('html-loader!./layout/nav.html') %>
+    <div>
+        <a href="#" class="link">test</a>
+    </div>
+    <%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>

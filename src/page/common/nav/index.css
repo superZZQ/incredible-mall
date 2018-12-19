@@ -1,0 +1,29 @@
+/*
+* @Author: ZZQ
+* @Date:   2018-12-19 14:08:08
+* @Last Modified by:   ZZQ
+* @Last Modified time: 2018-12-19 14:17:38
+*/
+.nav{
+    background: #eee;
+    height: 30px;
+    line-height: 30px;
+}
+/*用户部分*/
+.nav .user{
+    float: left;
+}
+.nav .user.login{
+    display: none;
+}
+.nav .user .link,.link-text{
+    margin-right: 5px;
+}
+/*导航链接部分*/
+.nav .nav-list{
+    float: right;
+}
+.nav .nav-list .nav-item{
+    display: inline-block;
+    margin-left: 5px;
+}
