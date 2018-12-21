@@ -2,12 +2,16 @@
 <html>
 <head>
     <%= require('html-loader!./layout/head-common.html') %>
-    <title>沙雕商城电商平台</title>
+    <title><%= htmlWebpackPlugin.options.title %>-沙雕商城电商平台</title>
 </head>
 
 <body>
     <%= require('html-loader!./layout/header.html') %>
     <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/nav-side.html') %>
+    <div class="page-wrap">
+        <div class="content with-nav"></div>
+    </div>
     <div>
         <a href="#" class="link">test</a>
     </div>

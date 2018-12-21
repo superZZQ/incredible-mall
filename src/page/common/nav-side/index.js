@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-19 17:39:14
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-24 16:46:02
+* @Last Modified by:   ZZQ
+* @Last Modified time: 2018-12-21 13:56:54
 */
 'use strict';
 require('./index.css');
@@ -21,7 +21,7 @@ var navSide = {
     },
     init : function(option){
         // 合并选项
-        $.extend(this.option, option);
+        $.extend(this.option, option);                      //jquery提供的extend方法
         this.renderNav();
     },
     // 渲染导航菜单
