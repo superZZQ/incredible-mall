@@ -2,16 +2,16 @@
 * @Author: ZZQ
 * @Date:   2018-10-18 09:59:42
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-21 14:34:43
+* @Last Modified time: 2018-12-21 17:12:02
 */
 'use strict';
-/*require('./index.css');*/
+require('./index.css');
 console.log("hello?");
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var navSide = require('page/common/nav-side/index.js');
 navSide.init({
-    name: 'user-center'
+    name : 'user-center'
 });
 var _mm = require('util/mm.js');
 /*console.log(_mm.getUrlParam('test'));                   //test参数

@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-10-18 10:37:15
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-21 14:49:08
+* @Last Modified time: 2018-12-22 14:31:23
 */
 const path = require('path');
 const webpack = require('webpack');
@@ -12,7 +12,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 //环境变量配置，dev / online
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 console.log(WEBPACK_ENV);
-//获取heml-webpack-plugin参数的方法
+//获取html-webpack-plugin参数的方法
 var getHtmlConfig = function(name,title){
     return {
         template: './src/view/'+name+'.html',
@@ -28,7 +28,9 @@ var config = {
   entry: {
     'common': ['./src/page/common/index.js'],
     'index': ['./src/page/index/index.js'],
-    'login': ['./src/page/login/index.js'],
+    'user-login': ['./src/page/user-login/index.js'],
+    'user-register': ['./src/page/user-register/index.js'],
+    'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
     'result': ['./src/page/result/index.js'],
   },
   output: {
@@ -44,7 +46,9 @@ var config = {
     new ExtractTextPlugin('css/[name].css'),
     //html模板的处理
     new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-    new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
     new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
   ],
   resolve:{

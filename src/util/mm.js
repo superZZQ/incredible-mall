@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-12-18 17:00:53
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-19 13:34:55
+* @Last Modified time: 2018-12-22 15:09:48
 */
 'use strict';
 var Hogan = require('hogan');                   //渲染时使用的hogan组件，初始化hogan
@@ -80,7 +80,7 @@ var _mm = {
         }
     },
     doLogin: function(){
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },//redirect:跳回界面
     goHome: function(){
         window.location.href = './index.html';
