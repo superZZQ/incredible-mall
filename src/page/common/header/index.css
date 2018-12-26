@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-12-19 14:48:21
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-19 16:28:56
+* @Last Modified time: 2018-12-26 13:46:57
 */
 /*通用头部导航*/
 
@@ -15,6 +15,7 @@
     color: #c60023;
     font-weight: bold;
     font-family: EngFont;
+    text-decoration: none;
 }
 .header .search-con{
     padding: 40px 0 30px 250px;
@@ -32,4 +33,14 @@
     position: absolute;
     height: 39px;
     width: 80px;
+}
+/*面包屑导航*/
+.crumb{
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border-top: 2px solid #c60023;
 }

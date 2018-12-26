@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-10-23 14:56:18
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-22 13:55:08
+* @Last Modified time: 2018-12-22 16:35:11
 */
 'use strict';
 require('./index.css');
@@ -18,7 +18,6 @@ var formError = {
         $('.error-item').hide().find('.err-msg').text('');
     }
 };
-console.log('hello login');
 //login逻辑部分
 var page = {
     init: function() {
@@ -65,14 +64,14 @@ var page = {
             status: false,
             msg: ''
         };
-        /*if (!_mm.validate(formData.username,'require')) {
+        if (!_mm.validate(formData.username,'require')) {
             result.msg = '用户名不能为空';
             return result;
         }
         if (!_mm.validate(formData.password,'require')) {
             result.msg = '密码不能为空';
             return result;
-        }*/
+        }
         //通过验证返回正确提示
         result.status = true;
         result.msg = '验证通过';

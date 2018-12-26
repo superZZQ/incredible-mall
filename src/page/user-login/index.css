@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-12-22 11:45:00
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-22 12:50:59
+* @Last Modified time: 2018-12-22 16:30:36
 */
 /*最外层容器*/
 .page-wrap{
@@ -17,7 +17,7 @@
     width: 400px;
     background: #fff;
 }
-.user-con .user-titile{
+.user-con .user-title{
     text-align: center;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;

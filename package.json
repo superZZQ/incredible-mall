@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "dev_env": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8082",
-    "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8082",
+    "dev_env": "WEBPACK_ENV=dev webpack-dev-server --port 8082",
+    "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --port 8082",
     "dist": "WEBPACK_ENV=online webpack -p",
     "dist_win": "set WEBPACK_ENV=online && webpack -p"
   },

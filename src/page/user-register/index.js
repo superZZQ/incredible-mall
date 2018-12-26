@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-12-22 12:57:31
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-22 14:24:02
+* @Last Modified time: 2018-12-22 16:56:33
 */
 'use strict';
 require('./index.css');
@@ -18,7 +18,6 @@ var formError = {
         $('.error-item').hide().find('.err-msg').text('');
     }
 };
-console.log('hello login');
 //login逻辑部分
 var page = {
     init: function() {
@@ -43,12 +42,12 @@ var page = {
         //验证password
         $('#password').blur(function(){
             var password = $.trim($(this).val());
-            //异步验证密码是否为空
+            //验证密码是否为空
             if (!_mm.validate(password,'require')) {
                 formError.show('密码不能为空');
             }else{
                 formError.hide();
-                //异步验证密码长度是否少于六位
+                //验证密码长度是否少于六位
                 if (password.length < 6) {
                     formError.show('密码长度不能少于6位');
                 }else{
@@ -60,12 +59,12 @@ var page = {
         $('#passwordConfirm').blur(function(){
             var password = $.trim($('#password').val());
             var passwordConfirm = $.trim($(this).val());
-            //异步验证密码是否为空
+            //验证密码是否为空
             if (!_mm.validate(passwordConfirm,'require')) {
                 formError.show('再次输入密码不能为空');
             }else{
                 formError.hide();
-                //异步两次密码是否一致
+                //两次密码是否一致
                 if (password !== passwordConfirm) {
                     formError.show('两次输入密码不一致');
                 }else{
@@ -76,12 +75,12 @@ var page = {
         //验证phone
         $('#phone').blur(function(){
             var phone = $.trim($(this).val());
-            //异步验证手机号是否为空
+            //验证手机号是否为空
             if (!_mm.validate(phone,'require')) {
                 formError.show('手机号不能为空');
             }else{
                 formError.hide();
-                //异步验证手机号格式是否正确
+                //验证手机号格式是否正确
                 if (!_mm.validate(phone,'phone')){
                     formError.show('手机号格式不正确');
                 }else{
@@ -92,12 +91,12 @@ var page = {
         //验证email
         $('#email').blur(function(){
             var email = $.trim($(this).val());
-            //异步验证邮箱是否为空
+            //验证邮箱是否为空
             if (!_mm.validate(email,'require')) {
                 formError.show('邮箱不能为空');
             }else{
                 formError.hide();
-                //异步验证邮箱格式是否正确
+                //验证邮箱格式是否正确
                 if (!_mm.validate(email,'email')){
                     formError.show('邮箱格式不正确');
                 }else{
@@ -108,7 +107,7 @@ var page = {
         //验证question
         $('#question').blur(function(){
             var question = $.trim($(this).val());
-            //异步验证密码提示问题是否为空
+            //验证密码提示问题是否为空
             if (!_mm.validate(question,'require')) {
                 formError.show('密码提示问题不能为空');
             }else{
@@ -118,7 +117,7 @@ var page = {
         //验证answer
         $('#answer').blur(function(){
             var answer = $.trim($(this).val());
-            //异步验证密码提示问题答案是否为空
+            //验证密码提示问题答案是否为空
             if (!_mm.validate(answer,'require')) {
                 formError.show('密码提示问题答案不能为空');
             }else{
