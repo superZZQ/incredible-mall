@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-10-18 10:37:15
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-26 16:51:46
+* @Last Modified time: 2018-12-29 17:49:33
 */
 const path = require('path');
 const webpack = require('webpack');
@@ -10,7 +10,7 @@ const webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 //环境变量配置，dev / online
-var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'win';
 console.log(WEBPACK_ENV);
 //获取html-webpack-plugin参数的方法
 var getHtmlConfig = function(name,title){
@@ -118,7 +118,7 @@ var config = {
             cacheGroups: {
                 commons: {
                     name: "common",
-                    filename: "js/base.js", //运行失败
+                    //filename: "js/base.js", 运行失败
                     chunks: "initial",
                     minChunks: 2                    
                 }

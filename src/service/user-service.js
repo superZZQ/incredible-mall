@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-12-19 16:48:50
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-19 16:49:06
+* @Last Modified time: 2018-12-29 19:22:54
 */
 
 'use strict';
@@ -13,7 +13,7 @@ var _user = {
     // 用户登录
     login : function(userInfo, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/user/login.do'),
+            url     : _mm.getServerUrl('http://www.happymmall.com/user/login.do'),
             data    : userInfo,
             method  : 'POST',
             success : resolve,

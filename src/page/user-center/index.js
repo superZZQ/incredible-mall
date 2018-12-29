@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-12-26 13:31:29
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-26 14:29:55
+* @Last Modified time: 2018-12-29 20:38:29
 */
 'use strict';
 require('./index.css');
@@ -10,11 +10,6 @@ console.log("hello?");
 require('page/common/nav-simple/index.js');
 require('page/common/header/index.js');
 var navSide = require('page/common/nav-side/index.js');
-var _mm = require('util/mm.js');
-
-'use strict';
-require('./index.css');
-require('page/common/header/index.js');
 var _user = require('service/user-service.js');
 var _mm = require('util/mm.js');
 var templateIndex = require('./index.string');

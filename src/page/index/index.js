@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2018-10-18 09:59:42
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-26 16:10:46
+* @Last Modified time: 2018-12-29 18:32:33
 */
 'use strict';
 require('./index.css');
@@ -20,12 +20,13 @@ var data = {
     data : 'hehe'
 };
 console.log(_mm.renderHtml(html,data));*/
-/*_mm.request({
-    url: '/product/list.do?keyword=1',
+_mm.request({
+    url: 'http://www.happymmall.com/product/list.do?keyword=1',
     success: function(res){
         console.log(res);
     },
     error: function(err){
+        console.log("hah");
         console.log(err);
     }
-});*/
+});
