@@ -2,10 +2,10 @@
 * @Author: ZZQ
 * @Date:   2018-12-18 17:00:53
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-22 15:09:48
+* @Last Modified time: 2018-12-30 02:49:03
 */
 'use strict';
-var Hogan = require('hogan');                   //渲染时使用的hogan组件，初始化hogan
+var Hogan = require('hogan.js');                   //渲染时使用的hogan组件，初始化hogan
 //这是一个工具类，放在通用工具文件夹中
 var conf = {
     serverHost:''                               //

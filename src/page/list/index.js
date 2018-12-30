@@ -1,66 +1,48 @@
-/*
-* @Author: ZZQ
-* @Date:   2018-12-26 13:40:28
-* @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-30 19:41:51
-*/
+
 'use strict';
 require('./index.css');
-console.log("hello?");
-require('page/common/nav-simple/index.js');
+require('page/common/nav/index.js');
 require('page/common/header/index.js');
-var navSide = require('page/common/nav-side/index.js');
-var _user = require('service/user-service.js');
+var _user = require('service/product-service.js');
 var _mm = require('util/mm.js');
 var templateIndex = require('./index.string');
 
 var page = {
+    data: {
+        listParam: {
+            keyword: _mm.getUrlParam('keyword') || '',
+            categoryId: _mm.getUrlParam('categoryId') || '',
+            orderBy: _mm.getUrlParam('orderBy') || 'default',
+            pageNum: _mm.getUrlParam('pageNum') || 1,
+            pageSize: _mm.getUrlParam('pageSize') || 20
+        }
+    },
     init: function() {
         this.onLoad();
         this.bindEvent();
     },
     onLoad: function(){
-        //初始化左侧菜单
-        navSide.init({
-            name: 'user-center-update'
-        });
-        // 加载用户信息
-        this.loadUserInfo();
+        this.loadList();
     },
     bindEvent: function(){
-        var _this = this;
-        $(document).on('click','.btn-submit',function(){
-            var userInfo = {
-                phone: $.trim($('#phone').val()),
-                email: $.trim($('#email').val()),
-                question: $.trim($('#question').val()),
-                answer: $.trim($('#answer').val())
-            },
-            validateResult = _this.validateForm(userInfo);
-            if(validateResult.status){
-                _user.updateUserInfo(userInfo,function(res,msg){
-                    _mm.successTips(msg);
-                    window.location.href = './user-center.html';
-                },function(errMsg){
-                    /*_mm.errorTips(errMsg);*/
-                });
-            }
-            else{
-                /*_mm.errorTips(validateResult.msg);*/
-            }
+        
+    },
+    //加载list数据
+    loadList: function(){
+        var listParam = this.data.listParam,
+            listHtml = '',
+            _this = this;
+        _product.getProductList(listParam,function(){
+            listHtml = _mm.renderHtml(templateIndex,{
+                list: res.list
+            });
+            $('.p-list-con').html(listHtml);
+            _this.loadPagination(res.pageNum,res.pages);
+        },function(errMsg){
+            _mm.errorTips(errMsg);
         });
     },
-    // 加载用户信息
-    loadUserInfo : function(){
-        var userHtml = '';
-        _user.getUserInfo(function(res){
-            userHtml = _mm.renderHtml(templateIndex, res);
-            $('.panel-body').html(userHtml);
-        }, function(errMsg){
-           /* _mm.errorTips(errMsg);*/
-        });
-    },
-    //验证字段信息
+    //加载分页信息
     formValidate: function(formData){
         var result = {
             status: false,

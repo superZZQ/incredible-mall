@@ -2,11 +2,10 @@
 * @Author: ZZQ
 * @Date:   2018-12-26 13:31:29
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2018-12-29 20:38:29
+* @Last Modified time: 2018-12-30 19:15:50
 */
 'use strict';
 require('./index.css');
-console.log("hello?");
 require('page/common/nav-simple/index.js');
 require('page/common/header/index.js');
 var navSide = require('page/common/nav-side/index.js');

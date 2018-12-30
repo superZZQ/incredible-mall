@@ -25,6 +25,7 @@
     "css-loader": "^1.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^2.0.0",
+    "hogan": "^1.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "json-server": "^0.14.0",
@@ -32,13 +33,14 @@
     "style": "0.0.3",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.27.1",
+    "webpack": "^4.28.3",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
     "hogan": "^1.0.2",
+    "hogan.js": "^3.0.2",
     "jquery": "^3.3.1",
     "webpack-dev-server": "^3.1.0"
   }
