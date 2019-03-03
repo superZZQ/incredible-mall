@@ -1,4 +1,4 @@
-# 沙雕商城
+# 电子商务商城平台前端
 
 #### 项目介绍
 incredible mall是一个基于MVVM模式开发的多层架构的综合型B2C电子商务平台。结合webpack、node.js、npm、shell等工具，采用前后端完全分离的形式，包含用户模块、商品模块、购物车模块、订单模块、支付模块、管理后台等。
@@ -26,3 +26,7 @@ incredible mall是一个基于MVVM模式开发的多层架构的综合型B2C电�
 3. 提交代码
 4. 新建 Pull Request
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f987a2f0e3cdcf4f294d97250920eea9e9fa7b29
