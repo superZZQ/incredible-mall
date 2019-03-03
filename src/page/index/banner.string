@@ -1,5 +1,6 @@
 <div class="banner">
     <ul>
+<<<<<<< HEAD
     <li>
             <a href="./list.html?catgoryId=100021" target="_blank">
                 <img class="banner-img" src="../../image/banner/banner1.jpg">
@@ -23,13 +24,45 @@
         <li>
             <a href="./list.html?catgoryId=100021" target="_blank">
                 <img class="banner-img" src="../../image/banner/banner5.jpg">
+=======
+        <li>
+            <a href="./list.html?categoryId=100021" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner1.jpg" />
+            </a>
+        </li>
+        <li>
+            <a href="./list.html?categoryId=100030" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner2.jpg" />
+            </a>
+        </li>
+        <li>
+            <a href="./list.html?categoryId=100016" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner3.jpg" />
+            </a>
+        </li>
+        <li>
+            <a href="./list.html?categoryId=100001" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner4.jpg" />
+            </a>
+        </li>
+        <li>
+            <a href="./list.html?categoryId=100021" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner5.jpg" />
+>>>>>>> incredible_mall_v1.0
             </a>
         </li>
     </ul>
     <div class="banner-arrow prev">
+<<<<<<< HEAD
         <i class="fa fa-angle-left"</i>
     </div>
     <div class="banner-arrow next">
         <i class="fa fa-angle-right"</i>
+=======
+        <i class="fa fa-angle-left"></i>
+    </div>
+    <div class="banner-arrow next">
+        <i class="fa fa-angle-right"></i>
+>>>>>>> incredible_mall_v1.0
     </div>
 </div>

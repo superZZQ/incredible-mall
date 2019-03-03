@@ -2,7 +2,11 @@
 * @Author: ZZQ
 * @Date:   2018-10-18 10:37:15
 * @Last Modified by:   ZZQ
+<<<<<<< HEAD
 * @Last Modified time: 2018-12-30 23:05:39
+=======
+* @Last Modified time: 2019-03-03 19:45:53
+>>>>>>> incredible_mall_v1.0
 */
 const path = require('path');
 const webpack = require('webpack');
@@ -29,6 +33,14 @@ var config = {
     'common': ['./src/page/common/index.js'],
     'index': ['./src/page/index/index.js'],
     'list': ['./src/page/list/index.js'],
+<<<<<<< HEAD
+=======
+    'detail': ['./src/page/detail/index.js'],
+    'cart': ['./src/page/cart/index.js'],
+    'order-confirm': ['./src/page/order-confirm/index.js'],
+    'order-list': ['./src/page/order-list/index.js'],
+    'order-detail': ['./src/page/order-detail/index.js'],
+>>>>>>> incredible_mall_v1.0
     'user-login': ['./src/page/user-login/index.js'],
     'user-register': ['./src/page/user-register/index.js'],
     'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
@@ -51,6 +63,14 @@ var config = {
     //html模板的处理
     new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
     new HtmlWebpackPlugin(getHtmlConfig('list','商品列表页')),
+<<<<<<< HEAD
+=======
+    new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情页')),
+    new HtmlWebpackPlugin(getHtmlConfig('cart','购物车')),
+    new HtmlWebpackPlugin(getHtmlConfig('order-confirm','订单确认页')),
+    new HtmlWebpackPlugin(getHtmlConfig('order-detail','订单详情页')),
+    new HtmlWebpackPlugin(getHtmlConfig('order-list','订单列表')),
+>>>>>>> incredible_mall_v1.0
     new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),

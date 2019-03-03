@@ -2,7 +2,11 @@
 * @Author: ZZQ
 * @Date:   2018-10-24 11:55:44
 * @Last Modified by:   ZZQ
+<<<<<<< HEAD
 * @Last Modified time: 2018-12-30 17:49:07
+=======
+* @Last Modified time: 2018-12-31 00:19:19
+>>>>>>> incredible_mall_v1.0
 */
 /*keyword-list*/
 .keyword-list{
@@ -30,12 +34,12 @@
 .keyword-list .keyword-item .link:hover{
     color: #c60023;
 }
-/*banner-con*/
+/* banner-con */
 .banner-con{
     width: 830px;
-    height: 370px;
-    background-color: #eee;
     float: left;
+    height: 370px;
+    background: #eee;
 }
 .banner-con .loading{
     margin-top: 150px;
@@ -44,22 +48,39 @@
     width: 100%;
     height: 370px;
 }
+<<<<<<< HEAD
 /*banner前一张后一张按钮*/
 .banner-con .banner-arrow{
     position: absolute;
     top: 160px;
+=======
+/* banner的前一张和后一张按钮 */
+.banner-con .banner-arrow{
+    position: absolute; 
+    top:160px;
+>>>>>>> incredible_mall_v1.0
     width: 30px;
     height: 50px;
     line-height: 50px;
     text-align: center;
     font-size: 30px;
+<<<<<<< HEAD
     background: #ccc;
     background: rgba(0,0,0,0.2);
+=======
+    color: #fff;
+    background: #ccc;
+    background: rgba(0,0,0,.2);
+>>>>>>> incredible_mall_v1.0
     cursor: pointer;
 }
 .banner-con .banner-arrow:hover{
     background: #aaa;
+<<<<<<< HEAD
     background: rgba(0,0,0,0.5);
+=======
+    background: rgba(0,0,0,.5);
+>>>>>>> incredible_mall_v1.0
 }
 .banner-con .banner-arrow.prev{
     left: 0;
@@ -76,6 +97,10 @@
     font-size: 20px;
     border-bottom: 1px solid #d58717;
 }
+<<<<<<< HEAD
+=======
+/* 更改各楼层标题颜色 */
+>>>>>>> incredible_mall_v1.0
 .floor-wrap:nth-child(2) .floor-title{
     color: #3b838c;
     border-bottom: 1px solid #3b838c;

@@ -2,7 +2,11 @@
 * @Author: ZZQ
 * @Date:   2018-12-30 23:06:09
 * @Last Modified by:   ZZQ
+<<<<<<< HEAD
 * @Last Modified time: 2018-12-30 23:43:40
+=======
+* @Last Modified time: 2019-01-15 21:27:39
+>>>>>>> incredible_mall_v1.0
 */
 /*排序按钮*/
 .sort-con{
@@ -36,4 +40,58 @@
 }
 .sort-con .sort-item.desc .fa-sort-asc{
     opacity: 0.6;
+<<<<<<< HEAD
+=======
+}
+
+/*列表*/
+.p-list-con{
+    margin-top: 15px;
+    margin-right: -20px;
+    overflow: hidden;
+}
+.p-list-con .p-item{
+    position: relative;
+    width: 180px;
+    float: left;
+    padding: 10px;
+    margin: 0 20px 20px 0;
+    background: #fff;
+}
+.p-list-con .p-item .p-img-con{
+    width: 180px;
+    height: 200px;
+}
+.p-list-con .p-item .p-img-con .p-img{
+    width: 100%;
+    height: 100%;
+}
+.p-list-con .p-item .p-price-con{
+    height: 30px;
+    line-height: 30px;
+}
+.p-list-con .p-item .p-price-con .p-price{
+    font-size: 16px;
+    color: #e7380b;
+}
+.p-list-con .p-item .p-name-con{
+    height: 40px;
+    overflow: hidden;
+}
+.p-list-con .p-item .p-name-con .p-name{
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: #666;
+    text-decoration: none;
+}
+/*错误信息*/
+.err-tip{
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+>>>>>>> incredible_mall_v1.0
 }
