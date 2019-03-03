@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2019-03-03 19:47:23
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2019-03-03 20:23:33
+* @Last Modified time: 2019-03-03 20:54:11
 */
 
 /*订单信息*/
@@ -18,7 +18,7 @@
     height: 30px;
     line-height: 30px;
     font-size: 12px;
-    margin-right: 1opx;
+    margin-right: 1px;
     text-align: center;
 }
 /*商品清单*/
