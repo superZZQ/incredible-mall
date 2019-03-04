@@ -3,7 +3,7 @@
 * @Date:   2018-12-30 23:06:09
 * @Last Modified by:   ZZQ
 <<<<<<< HEAD
-* @Last Modified time: 2018-12-30 23:43:40
+* @Last Modified time: 2019-03-04 23:43:42
 =======
 * @Last Modified time: 2019-01-15 21:27:39
 >>>>>>> incredible_mall_v1.0
@@ -40,8 +40,6 @@
 }
 .sort-con .sort-item.desc .fa-sort-asc{
     opacity: 0.6;
-<<<<<<< HEAD
-=======
 }
 
 /*列表*/
@@ -93,5 +91,4 @@
     font-weight: bold;
     text-align: center;
     background: #eee;
->>>>>>> incredible_mall_v1.0
 }

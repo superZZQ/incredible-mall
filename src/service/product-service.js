@@ -3,7 +3,7 @@
 * @Date:   2018-12-30 23:20:07
 * @Last Modified by:   ZZQ
 <<<<<<< HEAD
-* @Last Modified time: 2018-12-30 23:39:37
+* @Last Modified time: 2019-03-04 23:31:20
 =======
 * @Last Modified time: 2019-01-15 21:48:31
 >>>>>>> incredible_mall_v1.0
@@ -25,8 +25,6 @@ var _product = {
             success : resolve,
             error   : reject
         });
-<<<<<<< HEAD
-=======
     },
     // 获取商品详细信息
     getProductDetail : function(productId, resolve, reject){
@@ -38,7 +36,6 @@ var _product = {
             success : resolve,
             error   : reject
         });
->>>>>>> incredible_mall_v1.0
     }
 }
 module.exports = _product;

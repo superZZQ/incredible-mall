@@ -3,7 +3,7 @@
 * @Date:   2018-10-18 09:59:42
 * @Last Modified by:   ZZQ
 <<<<<<< HEAD
-* @Last Modified time: 2018-12-30 17:55:01
+* @Last Modified time: 2019-03-04 23:25:19
 =======
 * @Last Modified time: 2018-12-31 00:25:24
 >>>>>>> incredible_mall_v1.0
@@ -13,16 +13,13 @@ require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
 require('util/slider/index.js');
-<<<<<<< HEAD
 var navSide = require('page/common/nav-side/index.js');
 var templateBanner = require('./banner.string');
 /*navSide.init({
     name : 'user-center'
 });*/
-=======
 var navSide         = require('page/common/nav-side/index.js');
 var templateBanner  = require('./banner.string');
->>>>>>> incredible_mall_v1.0
 var _mm = require('util/mm.js');
 $(function(){
     //渲染banner的html
