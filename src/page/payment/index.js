@@ -2,7 +2,7 @@
 * @Author: ZZQ
 * @Date:   2019-03-04 23:19:28
 * @Last Modified by:   ZZQ
-* @Last Modified time: 2019-03-04 23:21:44
+* @Last Modified time: 2019-03-06 11:35:57
 */
 
 'use strict';
@@ -10,7 +10,7 @@ require('./index.css');
 require('page/common/nav-simple/index.js');
 require('page/common/header/index.js');
 var navSide = require('page/common/nav-side/index.js');
-var _order = require('service/order-service.js');
+var _payment = require('service/payment-service.js');
 var _mm = require('util/mm.js');
 var templateIndex = require('./index.string');
 
@@ -20,7 +20,6 @@ var page = {
     },
     init: function() {
         this.onLoad();
-        this.bindEvent();
     },
     onLoad: function(){
         //初始化左侧菜单
@@ -28,40 +27,33 @@ var page = {
             name: 'order-detail'
         });
         //加载detail数据
-        this.loadDetail();
-    },
-    bindEvent: function(){
-        var _this = this;
-        $(document).on('click','.order-cancel',function(){
-            if(window.confirm('确实要取消该订单吗？')){
-                _order.cancelOrder(_this.data.orderNumber, function(res){
-                    _mm.successTips('该订单取消成功');
-                    _this.loadDetail();
-                },function(errMsg){
-                    _mm.errorTips(errMsg);
-                });
-            }
-        });
+        this.loadPaymentInfo();
     },
     //加载订单列表
-    loadDetail: function(){
+    loadPaymentInfo: function(){
         var _this = this,
-            orderDetailHtml = '',
-            $content = $('.content');
-        $content.html('<div class="loading"></div>');
-        _order.getOrderDetail(this.data.orderNumber,function(res){
-            _this.dataFilter(res);
+            paymentHtml = '',
+            $pageWrap = $('.page-wrap');
+        $pageWrap.html('<div class="loading"></div>');
+        _payment.getPaymentInfo(this.data.orderNumber,function(res){
             //渲染html
-            orderDetailHtml = _mm.renderHtml(templateIndex,res);
-            $content.html(orderDetailHtml);
+            paymentHtml = _mm.renderHtml(templateIndex,res);
+            $pageWrap.html(paymentHtml);
+            _this.listenOrderStatus();
         }, function(errMsg){
-            $content.html('<p class="err-tip">' + errMsg + '</p>');
+            $pageWrap.html('<p class="err-tip">' + errMsg + '</p>');
         });
     },
-    //数据的适配
-    dataFilter: function(data){
-        data.needPay = data.status == 10;
-        data.isCancelable = data.status == 10;
+    //监听订单状态
+    listenOrderStatus:function(){
+        var _this = this;
+        this.paymentTimer = window.setInterval(function(){
+            +payment.getPaymentStatus(_this.data.orderNumber,function(res){
+                if(res == true){
+                    window.location.href = './result.html?type = payment&orderNumber=' + _this.data.orderNumber;
+                }
+            });
+        });
     }
 };
 $(function(){
